@@ -1,0 +1,28 @@
+.c-section {
+  outline: none;
+  width: 100%;
+  overflow-x: hidden;
+  font-family: $body-font-family !important;
+  color: $gray-dark !important;
+
+  ::selection {
+    color: #fff;
+    background: $primary-color;
+  }
+
+  &__title {
+    font-size: $fs-30;
+    color: $black;
+    font-weight: $font-bold;
+  }
+
+  .c-card-image {
+    height: 200px;
+  }
+}
+
+// @include media-breakpoint-up(lg) {
+//   .c-section {
+//     outline: none;
+//   }
+// }

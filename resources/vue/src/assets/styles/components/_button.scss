@@ -1,0 +1,49 @@
+.c-section {
+  .c-button {
+    font-size: $fs-18;
+    padding: 6px 1rem;
+    display: inline-block;
+    outline: none;
+    text-align: center;
+    font-weight: $font-semibold;
+
+    @include transition(0.2s);
+
+    &--primary {
+      background-color: $primary-color;
+      color: $white;
+      border: none;
+
+      &:hover,
+      &:focus {
+        background-color: $primary-color;
+        color: $white;
+      }
+
+      &-long {
+        width: 100%;
+      }
+    }
+
+    &--white {
+      background-color: $white;
+      color: $primary-color;
+
+      &:hover,
+      &:focus {
+        color: $primary-color;
+      }
+    }
+  }
+}
+
+// @include media-breakpoint-up(lg) {
+//   .c-button {
+//     &--primary {
+//       &-long {
+//         width: auto;
+//         padding: 6px 7rem;
+//       }
+//     }
+//   }
+// }

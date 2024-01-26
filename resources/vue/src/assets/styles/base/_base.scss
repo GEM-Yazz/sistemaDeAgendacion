@@ -1,0 +1,117 @@
+.c-section {
+  ::selection {
+    color: #fff;
+    background: $primary-color;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    width: 100%;
+    overflow-x: hidden;
+    font-family: $body-font-family !important;
+    color: $gray-dark !important;
+  }
+
+  a {
+    color: $primary-color;
+  }
+
+  h1,
+  h2,
+  h3 {
+    // color: $black;
+    font-family: $secondary-font-family !important;
+  }
+
+  * {
+    &::-webkit-scrollbar {
+      width: 0;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: transparent;
+      border-radius: 0;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: $gray-dark;
+      border-radius: 10px;
+
+      &:hover {
+        background: $black;
+      }
+
+      &:active {
+        background: $primary-color;
+      }
+    }
+
+    .toast-header {
+      font-size: $fs-18;
+      background: $primary-color;
+      color: $white;
+      line-height: 15px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      button {
+        background: transparent;
+        border: none;
+        font-size: $fs-25;
+        color: $white;
+      }
+    }
+
+    .toast-body {
+      font-size: $fs-18;
+      background: $white;
+      color: $black;
+    }
+
+    .c-mainbutton {
+      bottom: 10px;
+      right: 10px;
+      position: fixed;
+      z-index: 1000;
+      border: 0;
+      width: 60px;
+      height: 60px;
+      background: $primary-color;
+      border-radius: 50%;
+      padding: 10px;
+      color: $white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: $fs-30;
+    }
+
+    .c-blockfixed {
+      // position: fixed;
+      // bottom: 85px;
+      // right: 10px;
+      width: 100%;
+      height: 100vh;
+      // border: 1px solid $primary-color;
+    }
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  .c-section {
+    * {
+      .c-blockfixed {
+        // position: fixed;
+        // bottom: 85px;
+        // right: 10px;
+        width: 300px;
+        height: 518px;
+        // border: 1px solid $primary-color;
+      }
+    }
+  }
+}
